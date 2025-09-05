@@ -4,11 +4,16 @@
   import path from 'path';
 
   export default defineConfig({
-    base: process.env.NODE_ENV === 'production' 
-      ? '/VacationRentalWebsiteMockup/'
-      : '/',
+    base: '/VacationRentalWebsiteMockup/',
     publicDir: 'public',
     plugins: [react()],
+    define: {
+      'process.env.NODE_ENV': `"${process.env.NODE_ENV}"`,
+    },
+    server: {
+      port: 3000,
+      open: true,
+    },
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -56,9 +61,16 @@
     build: {
       target: 'esnext',
       outDir: 'build',
-    },
-    server: {
-      port: 3000,
-      open: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            react: ['react', 'react-dom', 'react-router-dom'],
+            vendor: ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          },
+          entryFileNames: 'assets/[name].[hash].js',
+          chunkFileNames: 'assets/[name].[hash].js',
+          assetFileNames: 'assets/[name].[hash][extname]'
+        },
+      },
     },
   });

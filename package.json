@@ -56,7 +56,7 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build --outDir build",
+            "build": "vite build --outDir build --base=/VacationRentalWebsiteMockup/",
             "predeploy": "npm run build",
             "deploy": "gh-pages -d build"
       }

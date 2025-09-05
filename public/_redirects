@@ -1,1 +1,4 @@
+# Handle client-side routing, return all requests to index.html
+# https://github.com/rafgraph/spa-github-pages
+
 /* /index.html 200
