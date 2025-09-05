@@ -4,7 +4,10 @@
   import path from 'path';
 
   export default defineConfig({
-    base: '/VacationRentalWebsiteMockup/',
+    base: process.env.NODE_ENV === 'production' 
+      ? '/VacationRentalWebsiteMockup/'
+      : '/',
+    publicDir: 'public',
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
