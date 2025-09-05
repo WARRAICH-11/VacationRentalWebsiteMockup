@@ -1,4 +1,4 @@
-import{r as st,a as i,R as Ae,b as ct,c as ut}from"./react-DiPOuMOA.js";var ee={exports:{}},j={};/**
+import{r as st,a as i,R as Ae,b as ct,c as ut}from"./react.DiPOuMOA.js";var ee={exports:{}},j={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *

@@ -1,6 +1,4 @@
-# Single Page Apps for GitHub Pages
+# Handle client-side routing, return all requests to index.html
 # https://github.com/rafgraph/spa-github-pages
 
-# Redirect all requests to index.html
-# (except for files that exist in the public directory)
 /* /index.html 200
